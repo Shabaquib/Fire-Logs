@@ -1,0 +1,14 @@
+FloatingActionButton(
+            onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) => EditNote(
+                      isNew: true,
+                      topic: "",
+                      content: "",
+                      createdOn: DateTime.now(),
+                      colorMap: math.Random().nextInt(8),
+                      docId: "",
+                      userId: widget.userID.uid,
+                      canDelete: true,
+                    ))),
+            child: const Icon(Icons.add_rounded),
+          ),
